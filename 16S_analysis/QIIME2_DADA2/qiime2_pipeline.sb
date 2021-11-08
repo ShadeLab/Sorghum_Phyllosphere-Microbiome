@@ -101,4 +101,6 @@ qiime tools export \
   --input-path Mucilage_16SV4_resequencing/DADA2/table.qza \
   --output-path Mucilage_16SV4_resequencing/DADA2/phyloseq
 
+qiime tools export --input-path Mucilage_16SV4_resequencing/DADA2/taxonomy.qza --output-path Mucilage_16SV4_resequencing/DADA2/phyloseq/
+
 biom convert -i Mucilage_16SV4_resequencing/DADA2/phyloseq/feature-table.biom -o Mucilage_16SV4_resequencing/DADA2/phyloseq/otu_table.txt --to-tsv
