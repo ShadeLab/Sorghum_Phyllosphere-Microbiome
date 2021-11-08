@@ -40,7 +40,8 @@ qiime demux summarize \
 
 qiime dada2 denoise-paired \
   --i-demultiplexed-seqs Mucilage_16SV4_resequencing/paired-end-demux.qza \
-  --p-trunc-len-f 237 --p-trunc-len-r 145 \
+  --p-trunc-len-f 116 \
+  --p-trunc-len-r 166 \
   --o-table Mucilage_16SV4_resequencing/DADA2/table.qza \
   --o-representative-sequences Mucilage_16SV4_resequencing/DADA2/rep-seqs.qza \
   --o-denoising-stats Mucilage_16SV4_resequencing/DADA2/denoising-stats.qza
