@@ -19,6 +19,7 @@ cd /mnt/research/ShadeLab/WorkingSpace/MarcoMechan_WorkingSpace/
 mkdir Mucilage_16SV4_resequencing/DADA2/
 
 ##### First, prepare the tab-delimited manifest file to import the sequence data.
+#### manifest file is a tab-delimited file with 3 columns. Headers as follow sample-id forward-absolute-filepath reverse-absolute-filepath
 
 conda activate qiime2-2021.8
 
@@ -37,6 +38,7 @@ qiime demux summarize \
 
 #### Next step is to run the DADA2 plug-in. 
 #### use Zymo Research’s program FIGARO to find the trim parameters to optimize merging Forw and Rev reads. Remove as much of the lower quality portions of the reads as possible and still leaves enough overlap.
+#### https://john-quensen.com/tutorials/figaro/
 
 qiime dada2 denoise-paired \
   --i-demultiplexed-seqs Mucilage_16SV4_resequencing/paired-end-demux.qza \
